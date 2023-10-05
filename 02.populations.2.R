@@ -32,3 +32,7 @@ plot(bei.extra$elev)
 elevation <- bei.extra$elev
 plot(elevation)
 
+# we can use another method to used just a part of the dataset, especially convenient if we don't want to recall the name of that portion of the dataset
+plot(bei.extra[[1]])
+elevation2 <- bei.extra[[1]]
+plot(elevation2)
