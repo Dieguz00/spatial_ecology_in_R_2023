@@ -36,3 +36,4 @@ plot(elevation)
 plot(bei.extra[[1]])
 elevation2 <- bei.extra[[1]]
 plot(elevation2)
+# the number of [] depends on the type of data
