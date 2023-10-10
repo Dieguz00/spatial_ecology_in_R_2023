@@ -54,3 +54,16 @@ plot(elev)
 par(mfrow=c(1,2))
 plot(densitymap)
 plot(elev)
+
+# if we want two rows and one column
+par(mfrow=c(2,1))
+plot(densitymap)
+plot(elev)
+
+# multiframing is super useful to find correlations between variables
+
+# exercise! make a plot with one row, three columns, and bei, density and elevation (in this order) as the "arguments" of the plots
+par(mfrow=c(1,3))
+plot(bei)
+plot(densitymap)
+plot(elev)
