@@ -45,13 +45,24 @@ plot(pres, col="darkblue", cex=.7)
 points(abse, col="lightblue4", cex=.7)
 
 # Predictors: environamental variables
+
+# elevation predictor
 # with the system.file function we are going into the external folder
 elev <- system.file("external/elevation.asc", package="sdm")
 elev
 elevmap <- rast(elev)
 elevmap
 # rasters are images, not vectors
-
 plot(elevmap)
 points(pres, cex=.5)
 # this way we can look for correlations between this predictor (elevation) and the presence of individuals
+# in this case, individuals, Rana temporaria prefers medium elevations
+
+# temperature predictor
+temp <- system.file("external/temperature.asc", package="sdm")
+temp
+tempmap <- rast(temp)
+tempmap
+plot(tempmap)
+points(pres, cex=.5)
+# temperature is not a great predictor, as there is not a significant correlation, and even the gradient of temperature is not very high
