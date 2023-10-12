@@ -36,3 +36,5 @@ plot(abse, cex=.5)
 par(mfrow=c(1,2))
 plot(pres, cex=.5)
 plot(abse, cex=.5)
+
+# exercise: plot presences and absences all together, but with different colours
