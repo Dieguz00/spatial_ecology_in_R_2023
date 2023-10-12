@@ -87,7 +87,6 @@ points(pres, cex=.5)
 
 # Final multiframe
 par(mfrow= c(2,2))
-par(mfrow= c(2,2))
 plot(elevmap)
 points(pres, cex=.5)
 plot(tempmap)
