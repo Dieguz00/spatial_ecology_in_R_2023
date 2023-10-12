@@ -74,3 +74,4 @@ vegemap <- rast(vege)
 vegemap
 plot(vegemap)
 points(pres, cex=.5)
+# Rana temporaria loves areas characterized by a high vegetation cover (greater chances of survival)
