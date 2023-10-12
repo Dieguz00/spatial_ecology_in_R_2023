@@ -75,3 +75,12 @@ vegemap
 plot(vegemap)
 points(pres, cex=.5)
 # Rana temporaria loves areas characterized by a high vegetation cover (greater chances of survival)
+
+# with precipitation
+prec <- system.file("external/precipitation.asc", package="sdm")
+prec
+precmap <- rast(prec)
+precmap
+plot(precmap)
+points(pres, cex=.5)
+# Rana temporaria prefers a high precipitation level
