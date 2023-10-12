@@ -65,4 +65,12 @@ tempmap <- rast(temp)
 tempmap
 plot(tempmap)
 points(pres, cex=.5)
-# temperature is not a great predictor, as there is not a significant correlation, and even the gradient of temperature is not very high
+# we can say that Rana temporaria tries to avoid low temperatures
+
+# exercise: do the same with vegetation cover
+vege <- system.file("external/vegetation.asc", package="sdm")
+vege
+vegemap <- rast(vege)
+vegemap
+plot(vegemap)
+points(pres, cex=.5)
