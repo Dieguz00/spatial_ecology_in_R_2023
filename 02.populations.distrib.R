@@ -16,7 +16,7 @@ plot(rana)
 plot(rana, cex=.5)
 # the points that you see a could be both absence or presence data
 
-# selecting presences
+# Selecting presences
 rana [rana$Occurrence==1,]
 # because we just selected all the points equal to 1 (presences)
 pres <- rana [rana$Occurrence==1,]
@@ -31,3 +31,8 @@ abse$Occurrence
 plot(abse, cex=.5)
 
 # you could also use "!=" to pick the things "different from", so the opposite of "=="
+
+# exercise: plot presences and absences, one next to each other
+par(mfrow=c(1,2))
+plot(pres, cex=.5)
+plot(abse, cex=.5)
