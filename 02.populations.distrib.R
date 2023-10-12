@@ -84,3 +84,15 @@ precmap
 plot(precmap)
 points(pres, cex=.5)
 # Rana temporaria prefers a high precipitation level
+
+# Final multiframe
+par(mfrow= c(2,2))
+par(mfrow= c(2,2))
+plot(elevmap)
+points(pres, cex=.5)
+plot(tempmap)
+points(pres, cex=.5)
+plot(vegemap)
+points(pres, cex=.5)
+plot(precmap)
+points(pres, cex=.5)
