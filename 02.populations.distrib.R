@@ -41,6 +41,17 @@ plot(abse, cex=.5)
 # first of all, close the multiframe. to do it, use the function dev.off(). this is especially useful in the case of graphical problems
 dev.off()
 # and then, plot one and add the points of the other
-plot(pres, col="darkblue", cex=.5)
-points(abse, col="lightblue4", cex=.5)
+plot(pres, col="darkblue", cex=.7)
+points(abse, col="lightblue4", cex=.7)
 
+# Predictors: environamental variables
+# with the system.file function we are going into the external folder
+elev <- system.file("external/elevation.asc", package="sdm")
+elev
+elevmap <- rast(elev)
+elevmap
+# rasters are images, not vectors
+
+plot(elevmap)
+points(pres, cex=.5)
+# this way we can look for correlations between this predictor (elevation) and the presence of individuals
