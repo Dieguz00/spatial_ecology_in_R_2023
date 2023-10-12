@@ -37,4 +37,10 @@ par(mfrow=c(1,2))
 plot(pres, cex=.5)
 plot(abse, cex=.5)
 
-# exercise: plot presences and absences all together, but with different colours
+# exercise: plot presences and absences altogether, but with different colours
+# first of all, close the multiframe. to do it, use the function dev.off(). this is especially useful in the case of graphical problems
+dev.off()
+# and then, plot one and add the points of the other
+plot(pres, col="darkblue", cex=.5)
+points(abse, col="lightblue4", cex=.5)
+
