@@ -25,4 +25,10 @@ TimeRadTiger <- tiger$TimeRad
 densityPlot(TimeRadTiger, rug=TRUE)
 # the rug is useful to obtain a smoother curve
 
-# exercise: select only data about macaque
+# exercise: do the same with macaque
+macaque <- kerinci[kerinci$Sps=="macaque",]
+TimeRadMacaque <- macaque$TimeRad
+densityPlot(TimeRadMacaque, rug=TRUE)
+
+# to overlap the plot and, thus, identify juicy information
+overlapPlot(TimeRadTiger, TimeRadMacaque)
