@@ -69,3 +69,17 @@ im.plotRGB(stacksent, r=3, g=2, b=1)
 
 # now let's make a move of "one"
 im.plotRGB(stacksent, r=4, g=3, b=2)
+# this is useful as what reflects the infrared is exactly the vegetation (green)
+
+# let's put the infrared on top of the green component
+im.plotRGB(stacksent, r=3, g=4, b=2)
+# white and violet represent rocks in this case
+
+# let's move the infrared to the blue component
+im.plotRGB(stacksent, r=3, g=2, b=4)
+# in this case he vegetation will be blue
+
+
+# what about the "pairs" function? --> it's useful to identify correlations between variables
+?pairs
+pairs(stacksent)
