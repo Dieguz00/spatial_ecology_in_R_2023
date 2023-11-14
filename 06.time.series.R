@@ -27,3 +27,6 @@ plot(dif, col=cldif)
 
 ## Temperatures over Greenland 2000 -> 2015
 # Copernicus Global Land Servi --> website from which data (maps especially) can be downloaded
+
+g2000 <- im.import("greenland.2000.tif")
+g2000
