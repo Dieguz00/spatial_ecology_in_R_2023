@@ -54,4 +54,4 @@ plot(stackgr, col = clgr)
 ## Exercise: make the difference between the first and the the final elements of the stack
 difgr = stackgr[[1]] - stackgr[[4]]   # or, alternatively, also difgr = g2000 - g2015
 dev.off()
-plot(difgr, col = clgr)  # or plot(difgr, col = cldif)
+plot(difgr, col = cldif)
