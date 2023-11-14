@@ -45,3 +45,8 @@ plot(g2015, col = clgr)
 par(mfrow=c(2,1))
 plot(g2000, col = clgr)
 plot(g2015, col = clgr)   # a lot of ice is clearly being lost
+
+# stacking the data
+stackgr <- c(g2000, g2005, g2010, g2015)
+plot(stackgr, col = clgr)
+# stacking things all together and then plotting them all at once is a great alternative to "par"
