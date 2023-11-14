@@ -1,8 +1,9 @@
-## Time series analysis
+### Time series analysis
 
 library(imageRy)
 library(terra)
 
+## Covid-19 and pollution over Europe: January 2020 -> March 2020
 im.list()
 
 # import the data
@@ -23,3 +24,6 @@ plot(dif)
 # let's change the palette
 cldif <- colorRampPalette(c("blue", "white", "red")) (100)  # --> as it is an array, you have to use the "c"
 plot(dif, col=cldif)
+
+## Temperatures over Greenland 2000 -> 2015
+# Copernicus Global Land Servi --> website from which data (maps especially) can be downloaded
