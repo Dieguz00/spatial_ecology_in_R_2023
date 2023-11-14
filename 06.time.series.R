@@ -55,3 +55,7 @@ plot(stackgr, col = clgr)
 difgr = stackgr[[1]] - stackgr[[4]]   # or, alternatively, also difgr = g2000 - g2015
 dev.off()
 plot(difgr, col = cldif)
+
+## Exercise: make an RGB plot with stackgr
+# if the final image will become reddish, the T will have been higher at the beginning; if it becomes greenish, the T will have been higher in the middle; blueish = T higher at the end
+im.plotRGB(stackgr, r=1, g=2, b=3)
