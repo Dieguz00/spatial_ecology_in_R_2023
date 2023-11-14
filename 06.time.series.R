@@ -58,4 +58,6 @@ plot(difgr, col = cldif)
 
 ## Exercise: make an RGB plot with stackgr
 # if the final image will become reddish, the T will have been higher at the beginning; if it becomes greenish, the T will have been higher in the middle; blueish = T higher at the end
-im.plotRGB(stackgr, r=1, g=2, b=3)
+im.plotRGB(stackgr, r=1, g=2, b=3)   # as it is blueish, Ts have increased in Greenland
+
+## a nice website from which we can download data is www.earthobservatory.nasa.gov
