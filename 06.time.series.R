@@ -50,3 +50,8 @@ plot(g2015, col = clgr)   # a lot of ice is clearly being lost
 stackgr <- c(g2000, g2005, g2010, g2015)
 plot(stackgr, col = clgr)
 # stacking things all together and then plotting them all at once is a great alternative to "par"
+
+## Exercise: make the difference between the first and the the final elements of the stack
+dif = stackgr[[1]] - stackgr[[4]]
+dev.off()
+plot(dif)
