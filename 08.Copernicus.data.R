@@ -15,8 +15,26 @@ cl <- colorRampPalette(c("red", "orange", "yellow")) (100)
 plot(soilmoisture[[1]], col=cl)
 
 # how to crop the stack to a specific extent: define a variable and then crop an image to a certain extent
-ext <- c(22, 26, 55, 57)   # minimum longitude, maximum longitude, minimum latitude, maximum latitude
+ext <- c(20, 23, 55, 57)   # minimum longitude, maximum longitude, minimum latitude, maximum latitude
 soilmoisturecrop <- crop(soilmoisture, ext)
 soilmoisturecrop
 plot(soilmoisturecrop)
 plot(soilmoisturecrop[[1]], col=cl)
+
+# cropping images is very useful for burnt areas, as they are very small on the planet
+
+
+# let's do the same with an image created exactly 1 year before
+setwd("C:/Users/Diego C/Downloads")
+soilmoisture22 <- rast("c_gls_SSM1km_202211250000_CEURO_S1CSAR_V1.2.1.nc")
+soilmoisture22
+plot(soilmoisture22)
+plot(soilmoisture22[[1]])
+cl <- colorRampPalette(c("red", "orange", "yellow")) (100)
+plot(soilmoisture[[1]], col=cl)
+
+ext <- c(20, 23, 55, 57)   # minimum longitude, maximum longitude, minimum latitude, maximum latitude
+soilmoisture22crop <- crop(soilmoisture22, ext)
+soilmoisture22crop
+plot(soilmoisture22crop)
+plot(soilmoisture22crop[[1]], col=cl)
