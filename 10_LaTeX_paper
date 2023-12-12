@@ -9,3 +9,8 @@
 
  
 ## Project with LaTeX
+# \ --> to use functions
+# usepackage {} = library() in R
+# % = comments
+# article = a thesis, a project
+# 
