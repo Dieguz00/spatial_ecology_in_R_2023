@@ -25,3 +25,41 @@ plot(sd3)
 
 viridisc <- colorRampPalette(viridis(7))(255)
 plot(sd3, col=viridisc)
+
+# Exercise: calculate variability in a 7x7 pixels moving window
+sd7 <- focal(nir, matrix(1/49, 7, 7), fun=sd)
+plot(sd7, col =viridisc)
+
+# Exercise 2: plot via par(mfrow()) the 3x3 and the 7x7 standard deviation
+par(mfrow=c(1,2))
+plot(sd3, col=viridisc)
+plot(sd7, col=viridisc)
+
+# original image plus the 7x7 standard deviation
+par(mfrow=c(1,2))
+im.plotRGB(sent, r=2, g=1, b=3)
+plot(sd7, col=viridisc)
+
+
+
+
+
+
+
+
+
+# stacking nir and sd
+stacknv <- c(nir, sd3)
+plot(stacknv, col=viridis)
+
+# change the moving window
+sd5 <- focal(nir, matrix(1/25, 5, 5), fun=sd)
+stacknv <- c(nir, sd3, sd5)
+plot(stacknv, col=viridis)
+
+# change the moving window
+sd7 <- focal(nir, matrix(1/49, 7, 7), fun=sd)
+stacknv <- c(nir, sd3, sd5, sd7)
+plot(stacknv, col=viridis)
+viridisc <- colorRampPalette(viridis(7))(255)
+plot(sd3, col=viridisc)
